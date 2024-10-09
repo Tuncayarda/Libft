@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:27:39 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/08 17:03:49 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:44:47 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
-	if ((!dst && !src) || len == 0)
+	if ((dst == src) || len == 0)
 		return (dst);
 	if (dst < src)
 	{
