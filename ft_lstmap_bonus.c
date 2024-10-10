@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 21:29:09 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 21:42:34 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/10/11 00:06:37 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*ptr_temp;
 
-	if (!lst || !f || !del)
-		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{
