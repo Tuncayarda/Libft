@@ -6,11 +6,25 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:04:24 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 14:31:46 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/10/10 22:04:31 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	**ft_free_tab(char **tab, size_t wc)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < wc)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
 
 static size_t	ft_word_count(char const *s, char c)
 {
@@ -33,6 +47,18 @@ static size_t	ft_word_count(char const *s, char c)
 	return (wc);
 }
 
+static void	ft_just_pass_the_word(const char *s, size_t *f_curs, char c)
+{
+	while (s[*f_curs] && s[*f_curs] != c)
+		(*f_curs)++;
+}
+
+static void	ft_just_pass_the_char(const char *s, size_t *f_curs, char c)
+{
+	while (s[*f_curs] == c)
+		(*f_curs)++;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	f_curs;
@@ -44,17 +70,17 @@ char	**ft_split(char const *s, char c)
 	wc = 0;
 	tab = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!s || !tab)
-		return (NULL);
+		return (ft_free_tab(tab, wc));
 	while (s[f_curs])
 	{
-		while (s[f_curs] == c)
-			f_curs++;
+		ft_just_pass_the_char(s, &f_curs, c);
 		s_curs = f_curs;
-		while (s[f_curs] && s[f_curs] != c)
-			f_curs++;
+		ft_just_pass_the_word(s, &f_curs, c);
 		if (f_curs > s_curs)
 		{
 			tab[wc] = ft_substr(s, s_curs, f_curs - s_curs);
+			if (!tab[wc])
+				return (ft_free_tab(tab, wc));
 			wc++;
 		}
 	}

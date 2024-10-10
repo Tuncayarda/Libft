@@ -29,17 +29,37 @@ M_SRCS =	ft_isalpha.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
-			ft_itoa.c
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c
+
+B_SRCS =	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
 
 M_OBJS = $(M_SRCS:.c=.o)
+B_OBJS = $(B_SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(M_OBJS)
 	ar rc $(NAME) $(M_OBJS)
 
+bonus: $(NAME) $(B_OBJS)
+	ar rc $(NAME) $(B_OBJS)
+
 %.o: %.c
-	${CC} $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(M_OBJS)
