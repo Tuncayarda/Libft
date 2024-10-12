@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 18:33:25 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 18:43:04 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/10/12 18:02:50 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		size++;
 	}
-	lst = lst - size;
 	return (size);
 }

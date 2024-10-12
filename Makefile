@@ -62,10 +62,10 @@ bonus: $(NAME) $(B_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(M_OBJS)
+	rm -f $(M_OBJS) $(B_OBJS)
 
 fclean:
-	rm -f $(M_OBJS) $(NAME)
+	rm -f $(M_OBJS) $(NAME) $(B_OBJS)
 
 re: fclean all
 	
