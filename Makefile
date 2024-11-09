@@ -58,9 +58,6 @@ $(NAME): $(M_OBJS)
 bonus: $(NAME) $(B_OBJS)
 	ar rcs $(NAME) $(B_OBJS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 clean:
 	rm -f $(M_OBJS) $(B_OBJS)
 
