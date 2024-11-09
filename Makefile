@@ -53,16 +53,19 @@ B_OBJS = $(B_SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(M_OBJS)
-	ar rcs $(NAME) $(M_OBJS)
+	@ar rcs $(NAME) $(M_OBJS)
 
 bonus: $(NAME) $(B_OBJS)
-	ar rcs $(NAME) $(B_OBJS)
+	@ar rcs $(NAME) $(B_OBJS)
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(M_OBJS) $(B_OBJS)
+	@rm -f $(M_OBJS) $(B_OBJS)
 
 fclean:
-	rm -f $(M_OBJS) $(NAME) $(B_OBJS)
+	@rm -f $(M_OBJS) $(NAME) $(B_OBJS)
 
 re: fclean all
 	
