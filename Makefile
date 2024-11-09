@@ -53,10 +53,10 @@ B_OBJS = $(B_SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(M_OBJS)
-	ar rc $(NAME) $(M_OBJS)
+	ar rcs $(NAME) $(M_OBJS)
 
 bonus: $(NAME) $(B_OBJS)
-	ar rc $(NAME) $(B_OBJS)
+	ar rcs $(NAME) $(B_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
