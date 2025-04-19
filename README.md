@@ -1,6 +1,5 @@
 Certainly! Below is a detailed `README.md` template for a Libft project, including brief descriptions of common functions and compilation instructions in English.
 
-```markdown
 # Libft
 
 Libft is a custom C library that implements a variety of standard C functions as well as additional utility functions. This project is often used as a foundational exercise in C programming to understand and implement basic functionalities from scratch.
