@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:27:24 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 21:29:39 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/04/29 16:30:09 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdint.h>
+
 typedef struct s_list
 {
 	void			*content;
