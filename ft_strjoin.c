@@ -6,13 +6,13 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:05 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 13:23:16 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/05/27 04:11:58 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*ptr;
 	size_t	total_len;
@@ -26,10 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = 0;
 	while (s1[i])
-	{
-		ptr[i] = s1[i];
-		i++;
-	}
+		ptr[i] = s1[i++];
 	i = 0;
 	while (s2[i])
 	{
@@ -37,5 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	ptr[ft_strlen(s1) + i] = '\0';
+	free(s2);
 	return (ptr);
 }
