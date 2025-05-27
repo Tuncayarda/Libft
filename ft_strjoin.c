@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:05 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/05/27 04:11:58 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/05/27 04:16:23 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (NULL);
 	i = 0;
 	while (s1[i])
-		ptr[i] = s1[i++];
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
 	i = 0;
 	while (s2[i])
 	{
