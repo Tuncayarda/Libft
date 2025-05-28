@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:52:05 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/05/27 04:23:10 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/05/28 22:13:47 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ char	*ft_strjoin(char *s1, char *s2)
 		i++;
 	}
 	ptr[ft_strlen(s1) + i] = '\0';
-	free(s2);
 	return (ptr);
 }
