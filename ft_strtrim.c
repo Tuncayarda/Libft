@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:04:14 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/10 14:03:31 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/07/08 21:48:20 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!set)
 		return (ft_strdup(s1));
 	first = 0;
+	if (s1[first] == '\0')
+		return (ft_strdup(s1));
 	while (s1[first] && ft_strchr(set, s1[first]))
 		first++;
 	last = ft_strlen(s1) - 1;
