@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:09:33 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/10/09 18:21:23 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/08/05 01:28:49 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_atoi(const char *str)
 	int		sign;
 	int		num;
 
+	if (!str)
+		return (0);
 	i = 0;
 	sign = 1;
 	num = 0;
