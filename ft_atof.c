@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 01:05:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/08/05 01:21:42 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/08/05 01:51:26 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ float	ft_atof(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 		result = result * 10 + (*str++ - '0');
-	if (*str == '.' || *str == ',')
+	if (*str == '.')
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
