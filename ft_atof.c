@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 01:05:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/08/05 01:06:25 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/08/05 01:21:42 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ float	ft_atof(const char *str)
 	float	decimal;
 	int		sign;
 
+	if (!str)
+		return (0.0f);
 	result = 0.0f;
 	decimal = 0.1f;
 	sign = 1;
